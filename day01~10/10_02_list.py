@@ -60,3 +60,15 @@ def reverse_1(num):
     return num
 
 print(reverse_1(a))
+
+
+# 퀴즈
+# 리스트를 거꾸로 뒤집는 함수를 만들기 - 추가 리스트 없음
+def reverse_list_4(num):
+    for i in range(len(num)//2):
+        num[i], num[len(num)-1 -i] = num[len(num)-1 -i], num[i]
+        # num[i], num[-1-i] = num[-1-i], num[i] 이게 더 간단
+    return num
+
+a = [1, 2, 3, 4, 5, 100]
+print(reverse_list_4(a))
