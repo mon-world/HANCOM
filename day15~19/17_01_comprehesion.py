@@ -73,13 +73,27 @@ print(s)
 s1 = [j for i in c for j in i]
 print(s1)
 
+# 퀴즈
+# 2차원 리스트에서 각각의 리스트에 홀수 갯수를 구하세요
+c_count = []
+for i in c:
+    odd = 0
+    for j in i:
+        if j % 2:
+            odd += 1
+    c_count.append(odd)
+
+# 섞어서 생각해보자
+lend = []
+for i in c:
+    lend.append(len([j for j in i if j % 2]))
+print(lend)
+
+lend = []
+print([len([j for j in i if j % 2]) for i in c])
 
 
 
 
-
-
-
-
-
+print(c_count)
 
