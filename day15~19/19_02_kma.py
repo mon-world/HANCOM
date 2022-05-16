@@ -60,9 +60,9 @@ for loc in locations:
 
         # 퀴즈
         # findall 1번 사용
-        # all_data = re.findall(r'<mode>(.+)</mode>.+<tmEf>(.+)</tmEf>.+<wf>(.+)</wf>.+<tmn>(.+)</tmn>.+<tmx>(.+)</tmx>.+<rnSt>(.+)</rnSt>', datum, re.DOTALL)
-        # mode, tmEf, wf, tmn, tmx, rnSt = all_data[0]
-        # print(mode, tmEf, wf, tmn, tmx, rnSt)
+        all_data = re.findall(r'<mode>(.+)</mode>.+<tmEf>(.+)</tmEf>.+<wf>(.+)</wf>.+<tmn>(.+)</tmn>.+<tmx>(.+)</tmx>.+<rnSt>(.+)</rnSt>', datum, re.DOTALL)
+        mode, tmEf, wf, tmn, tmx, rnSt = all_data[0]
+        print(mode, tmEf, wf, tmn, tmx, rnSt, sep = ',', file = f)
 
         # 돌아만 감
         # 안에 있는 글자만 다름
@@ -70,8 +70,8 @@ for loc in locations:
         '''
         # 여긴 왜 [0]이 아닌것인가...????????
         '''
-        all_data2 = re.findall(r'<.+>(.+)<.+>', datum)
-        mode, tmEf, wf, tmn, tmx, rnSt = all_data2
+        # all_data2 = re.findall(r'<.+>(.+)<.+>', datum)
+        # mode, tmEf, wf, tmn, tmx, rnSt = all_data2
         # print(prov, city, mode, tmEf, wf, tmn, tmx, rnSt)
 
         # 아래가 깔끔하지만 위가 어떤 데이터인지 더 선명함
