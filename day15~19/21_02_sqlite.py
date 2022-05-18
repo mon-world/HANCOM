@@ -70,7 +70,7 @@ def insert_row(db_path, rows):
     # query = 'INSERT INTO kma (prov, city, mode, tmEf, wf, tmn, tmx, rnSt) ' + values
 
     # 3번
-    prov, city, mode, tmEf, wf, tmn, tmx, rnSt = row
+    prov, city, mode, tmEf, wf, tmn, tmx, rnSt = rows
     base = 'INSERT INTO kma VALUES("{}", "{}", "{}", "{}", "{}", "{}", "{}", "{}")'
     query = base.format(prov, city, mode, tmEf, wf, tmn, tmx, rnSt)
     cur.execute(query)
