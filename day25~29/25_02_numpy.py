@@ -41,3 +41,14 @@ print(z)
 z2 = np.zeros([5, 5], dtype=np.int32)
 z2[1:-1, 1:-1] = 2
 print(z2)
+
+# 퀴즈
+# 0으로 채워진 2차원 배열에서 대각선을 3으로 바꾸세요
+z = np.zeros([5, 5], dtype=np.int32)
+# for i in range(5):
+#     z[i,i] = 3
+# 반복문 사용하지 않기
+# z[[0,1], 0] = 3       # 00 10이 바뀜
+# z[[0:4], [0:4]] = 3   # ~부터 ~까지 이기때문에 에러
+z[[range(5)],[range(5)]] = 3
+print(z)
